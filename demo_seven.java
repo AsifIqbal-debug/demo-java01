@@ -1,15 +1,15 @@
 class StudentOne{
-    String studentName;
-    int rollNumber;
-    char section;
-    String department;
+    private String studentName;
+    private int rollNumber;
+    private char section;
+    private String department;
 
     public String getStudentName() {
         return studentName;
     }
 
     public void setStudentName(String studentName) {
-        studentName = studentName;
+        this.studentName = studentName;
     }
 
     public int getRollNumber() {
@@ -20,7 +20,7 @@ class StudentOne{
         {
             throw new IllegalArgumentException("Invalid Args");
         }
-        rollNumber = rollNumber;
+        this.rollNumber = rollNumber;
     }
 
     public char getSection() {
@@ -28,7 +28,7 @@ class StudentOne{
     }
 
     public void setSection(char section) {
-        section = section;
+        this.section = section;
     }
 
     public String getDepartment() {
@@ -36,21 +36,23 @@ class StudentOne{
     }
 
     public void setDepartment(String department) {
-        department = department;
+        this.department = department;
     }
-    public void printStudentOne(){
-        System.out.println("Your name is "+studentName +" Your roll number is "+rollNumber+" Your Section is "+section+" Your department is "+department);
+//    public void printStudentOne(){
+//        System.out.println("Your name is "+studentName +" Your roll number is "+rollNumber+" Your Section is "+section+" Your department is "+department);
     }
 
-}
+
 public class demo_seven {
 public static void main(String[]args){
     StudentOne student1= new StudentOne();
-    student1.studentName="Mahbuba";
-    student1.rollNumber= -1;
-    student1.section='C';
-    student1.department="CSE";
-    student1.setRollNumber(-1);
-    student1.printStudentOne();
+    student1.setStudentName("Asif");
+    student1.setRollNumber(10);
+    student1.setSection('D');
+    student1.setDepartment("Bachelor's in CSE");
+    System.out.println(student1.getStudentName());
+    System.out.println(student1.getRollNumber());
+    System.out.println(student1.getSection());
+    System.out.println(student1.getDepartment());
 }
 }
